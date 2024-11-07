@@ -977,6 +977,8 @@ def create_map(company_locations,year, month,drought_info, selected_component=No
     return m._repr_html_()
 
 # Run the Dash app
-if __name__ == '__main__':
-    app.run_server(debug=True)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8050))  # Default to 8050 if PORT is not set
+    app.run_server(host="0.0.0.0", port=port)
+    
 
