@@ -590,6 +590,7 @@ def within_wpa(m, subcategory_option, location):
     return marker_color, icon_color, popup_text
 company_data = data
 app = dash.Dash(__name__)
+server = app.server
 app.title = 'CSRD' 
 
 # Extract unique years from dynamic_data
