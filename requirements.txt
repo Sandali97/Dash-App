@@ -1,3 +1,4 @@
+python_version = "3.9"
 dash==2.9.3
 numpy
 pandas
@@ -8,4 +9,3 @@ folium
 shapely
 IPython
 branca
-calendar
