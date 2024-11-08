@@ -588,10 +588,11 @@ def within_wpa(m, subcategory_option, location):
         icon_color = 'white' if marker_color != 'gainsboro' else 'black'  
         popup_text += f"Location Name: {location['locationName']}<br>Located within WPA: {within_wpa}"
     return marker_color, icon_color, popup_text
+    
 company_data = data
+
 app = dash.Dash(__name__)
 server = app.server
-app.title = 'CSRD' 
 
 # Extract unique years from dynamic_data
 years = drought_data['Year'].unique()  
@@ -978,7 +979,7 @@ def create_map(company_locations,year, month,drought_info, selected_component=No
 
 # Run the Dash app
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8050))  # Default to 8050 if PORT is not set
+    port = int(os.environ.get("PORT", 8050))
     app.run_server(host="0.0.0.0", port=port)
     
 
